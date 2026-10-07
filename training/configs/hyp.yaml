@@ -1,0 +1,12 @@
+imgsz: 640
+batch: 16
+optimizer: AdamW
+lr0: 0.001        # AdamW cần lr nhỏ; mặc định 0.01 của Ultralytics chỉ hợp với SGD
+warmup_bias_lr: 0.0  # với AdamW, lr của bias khi warmup không nên vượt 0.01
+cos_lr: True
+
+# Augmentation: không lật ảnh để giữ đúng nghĩa biển chỉ hướng
+fliplr: 0.0
+flipud: 0.0
+mosaic: 1.0
+hsv_h: 0.015

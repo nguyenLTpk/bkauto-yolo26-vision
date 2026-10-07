@@ -1,0 +1,19 @@
+id,name,declared,status,boxes,images,percent_boxes,valid_boxes,small,medium,large,median_side_px
+0,Crosswalk sign,True,kept,3802,3756,8.94,3802,911,2242,640,43.7
+1,Highway entrance sign,True,kept,3020,3001,7.1,3020,1099,1602,318,37.8
+2,Highway exit sign,True,kept,3505,3499,8.24,3505,1259,1230,1015,38.7
+3,No-entry road sign,True,kept,3642,3624,8.56,3642,1276,1378,988,39.1
+4,One-way road sign,True,kept,3239,3190,7.62,3239,1125,1361,751,41.5
+5,Parking sign,True,kept,3282,3262,7.72,3282,676,2113,492,46.1
+6,Priority sign,True,kept,2836,2834,6.67,2836,1016,1767,50,42.3
+7,Roundabout sign,True,kept,3542,3496,8.33,3542,1490,1494,556,38.0
+8,Stop sign,True,kept,3528,3500,8.3,3528,1049,1562,915,43.2
+9,Pedestrian,True,kept,3431,3430,8.07,3431,59,286,3077,206.8
+10,Car,True,dropped,3681,2510,8.66,3681,777,1905,988,63.0
+11,Green Light,True,dropped,1054,1054,2.48,1054,114,712,228,67.3
+12,Red Light,True,dropped,771,771,1.81,771,41,588,142,71.2
+13,Yellow Light,True,dropped,1157,1157,2.72,1157,0,943,214,76.6
+14,Closed road stand,True,dropped,252,252,0.59,252,86,126,39,41.2
+15,Parking spot,True,dropped,451,242,1.06,451,3,193,253,105.7
+16,Stop line,True,dropped,1245,1226,2.93,1245,116,547,531,87.5
+17,class_17,False,dropped,91,83,0.21,91,1,42,30,82.0

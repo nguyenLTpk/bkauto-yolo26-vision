@@ -1,0 +1,20 @@
+# Môi trường ảo Python
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Tập dữ liệu (KHÔNG đẩy ảnh và nhãn lên GitHub)
+data/raw/
+data/processed/
+
+# Nhật ký huấn luyện và Trọng số mô hình (Nặng hàng chục/trăm MB)
+runs/
+*.pt
+*.onnx
+*.hef
+*.nb
+
+# Tệp hệ thống và cấu hình IDE
+.vscode/
+.DS_Store

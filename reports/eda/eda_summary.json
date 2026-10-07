@@ -1,0 +1,884 @@
+{
+  "meta": {
+    "raw_dir": "C:/Users/ASUS/Documents/bkauto-yolo26-vision/data/raw",
+    "out_dir": "C:/Users/ASUS/Documents/bkauto-yolo26-vision/reports/eda",
+    "generated_at": "2026-10-07T19:22:17",
+    "class_names_source": "C:/Users/ASUS/Documents/bkauto-yolo26-vision/data/raw/Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/data.yaml",
+    "kept_class_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "verify_decode": true,
+    "workers": 16,
+    "runtime_seconds": 31.66
+  },
+  "format_detection": {
+    "detected": "yolo",
+    "file_counts": {
+      "yolo_txt": 16348,
+      "coco_json": 0,
+      "voc_xml": 0
+    },
+    "other_txt_files": [
+      "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/test.txt",
+      "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/train.txt",
+      "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/valid.txt"
+    ],
+    "coco_files": []
+  },
+  "class_names": {
+    "0": "Crosswalk sign",
+    "1": "Highway entrance sign",
+    "2": "Highway exit sign",
+    "3": "No-entry road sign",
+    "4": "One-way road sign",
+    "5": "Parking sign",
+    "6": "Priority sign",
+    "7": "Roundabout sign",
+    "8": "Stop sign",
+    "9": "Pedestrian",
+    "10": "Car",
+    "11": "Green Light",
+    "12": "Red Light",
+    "13": "Yellow Light",
+    "14": "Closed road stand",
+    "15": "Parking spot",
+    "16": "Stop line"
+  },
+  "overview": {
+    "total_images": 24258,
+    "total_size_mb": 1199.2,
+    "images_per_split": {
+      "train": {
+        "images": 21012,
+        "with_label_file": 14155,
+        "without_label_file": 6857,
+        "empty_label_files": 6,
+        "boxes": 38788
+      },
+      "valid": {
+        "images": 1954,
+        "with_label_file": 1171,
+        "without_label_file": 783,
+        "empty_label_files": 0,
+        "boxes": 2158
+      },
+      "test": {
+        "images": 1292,
+        "with_label_file": 1022,
+        "without_label_file": 270,
+        "empty_label_files": 0,
+        "boxes": 1583
+      }
+    },
+    "images_with_label_file": 16348,
+    "images_without_label_file": 7910,
+    "empty_label_files": 6,
+    "orphan_label_files": {
+      "count": 0,
+      "examples": []
+    },
+    "unreadable_files": {
+      "count": 0,
+      "examples": []
+    },
+    "zero_byte_images": {
+      "count": 76,
+      "examples": [
+        "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/images/test/frame0-01-30-92_jpg.rf.8e77efc0ee53bd4c69905c0e566ac712.jpg",
+        "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/images/train/frame0-00-07-73_jpg.rf.26da168556a54a650c66f6aed66ef7ea.jpg",
+        "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/images/train/frame0-00-08-73_jpg.rf.8de45eefacc1679e3ea6dd95c7cdb6ec.jpg",
+        "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/images/train/frame0-00-09-43_jpg.rf.3d59ec7faf85acdc023e2e5541ab102b.jpg",
+        "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/images/train/frame0-00-10-13_jpg.rf.8718e7da7db97e0d70e86c50be80e32e.jpg"
+      ]
+    },
+    "corrupted_images": {
+      "count": 0,
+      "examples": [],
+      "fully_verified": true
+    },
+    "decode_verified": true,
+    "header_unparsed_images": 0,
+    "exif_rotated_images": 0,
+    "jpeg_missing_eoi": 0
+  },
+  "resolution": {
+    "images_with_known_size": 24182,
+    "unknown_size": 76,
+    "unique_resolutions": 28,
+    "top": [
+      {
+        "resolution": "640x384",
+        "width": 640,
+        "height": 384,
+        "count": 14472,
+        "percent": 59.85
+      },
+      {
+        "resolution": "640x640",
+        "width": 640,
+        "height": 640,
+        "count": 7673,
+        "percent": 31.73
+      },
+      {
+        "resolution": "1920x1080",
+        "width": 1920,
+        "height": 1080,
+        "count": 1413,
+        "percent": 5.84
+      },
+      {
+        "resolution": "640x480",
+        "width": 640,
+        "height": 480,
+        "count": 167,
+        "percent": 0.69
+      },
+      {
+        "resolution": "1152x2560",
+        "width": 1152,
+        "height": 2560,
+        "count": 86,
+        "percent": 0.36
+      },
+      {
+        "resolution": "1154x2560",
+        "width": 1154,
+        "height": 2560,
+        "count": 29,
+        "percent": 0.12
+      },
+      {
+        "resolution": "1280x960",
+        "width": 1280,
+        "height": 960,
+        "count": 22,
+        "percent": 0.09
+      },
+      {
+        "resolution": "626x470",
+        "width": 626,
+        "height": 470,
+        "count": 20,
+        "percent": 0.08
+      },
+      {
+        "resolution": "612x460",
+        "width": 612,
+        "height": 460,
+        "count": 18,
+        "percent": 0.07
+      },
+      {
+        "resolution": "600x450",
+        "width": 600,
+        "height": 450,
+        "count": 18,
+        "percent": 0.07
+      }
+    ],
+    "other": {
+      "resolutions": 18,
+      "count": 264,
+      "percent": 1.09
+    },
+    "orientation": {
+      "square": 7673,
+      "landscape": 16381,
+      "portrait": 128
+    }
+  },
+  "classes_raw": {
+    "total_boxes": 42529,
+    "classes": [
+      {
+        "id": 0,
+        "name": "Crosswalk sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3802,
+        "images": 3756,
+        "percent_boxes": 8.94,
+        "valid_boxes": 3802,
+        "size": {
+          "small": 911,
+          "medium": 2242,
+          "large": 640
+        },
+        "median_side_px": 43.7
+      },
+      {
+        "id": 1,
+        "name": "Highway entrance sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3020,
+        "images": 3001,
+        "percent_boxes": 7.1,
+        "valid_boxes": 3020,
+        "size": {
+          "small": 1099,
+          "medium": 1602,
+          "large": 318
+        },
+        "median_side_px": 37.8
+      },
+      {
+        "id": 2,
+        "name": "Highway exit sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3505,
+        "images": 3499,
+        "percent_boxes": 8.24,
+        "valid_boxes": 3505,
+        "size": {
+          "small": 1259,
+          "medium": 1230,
+          "large": 1015
+        },
+        "median_side_px": 38.7
+      },
+      {
+        "id": 3,
+        "name": "No-entry road sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3642,
+        "images": 3624,
+        "percent_boxes": 8.56,
+        "valid_boxes": 3642,
+        "size": {
+          "small": 1276,
+          "medium": 1378,
+          "large": 988
+        },
+        "median_side_px": 39.1
+      },
+      {
+        "id": 4,
+        "name": "One-way road sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3239,
+        "images": 3190,
+        "percent_boxes": 7.62,
+        "valid_boxes": 3239,
+        "size": {
+          "small": 1125,
+          "medium": 1361,
+          "large": 751
+        },
+        "median_side_px": 41.5
+      },
+      {
+        "id": 5,
+        "name": "Parking sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3282,
+        "images": 3262,
+        "percent_boxes": 7.72,
+        "valid_boxes": 3282,
+        "size": {
+          "small": 676,
+          "medium": 2113,
+          "large": 492
+        },
+        "median_side_px": 46.1
+      },
+      {
+        "id": 6,
+        "name": "Priority sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 2836,
+        "images": 2834,
+        "percent_boxes": 6.67,
+        "valid_boxes": 2836,
+        "size": {
+          "small": 1016,
+          "medium": 1767,
+          "large": 50
+        },
+        "median_side_px": 42.3
+      },
+      {
+        "id": 7,
+        "name": "Roundabout sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3542,
+        "images": 3496,
+        "percent_boxes": 8.33,
+        "valid_boxes": 3542,
+        "size": {
+          "small": 1490,
+          "medium": 1494,
+          "large": 556
+        },
+        "median_side_px": 38.0
+      },
+      {
+        "id": 8,
+        "name": "Stop sign",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3528,
+        "images": 3500,
+        "percent_boxes": 8.3,
+        "valid_boxes": 3528,
+        "size": {
+          "small": 1049,
+          "medium": 1562,
+          "large": 915
+        },
+        "median_side_px": 43.2
+      },
+      {
+        "id": 9,
+        "name": "Pedestrian",
+        "declared": true,
+        "status": "kept",
+        "boxes": 3431,
+        "images": 3430,
+        "percent_boxes": 8.07,
+        "valid_boxes": 3431,
+        "size": {
+          "small": 59,
+          "medium": 286,
+          "large": 3077
+        },
+        "median_side_px": 206.8
+      },
+      {
+        "id": 10,
+        "name": "Car",
+        "declared": true,
+        "status": "dropped",
+        "boxes": 3681,
+        "images": 2510,
+        "percent_boxes": 8.66,
+        "valid_boxes": 3681,
+        "size": {
+          "small": 777,
+          "medium": 1905,
+          "large": 988
+        },
+        "median_side_px": 63.0
+      },
+      {
+        "id": 11,
+        "name": "Green Light",
+        "declared": true,
+        "status": "dropped",
+        "boxes": 1054,
+        "images": 1054,
+        "percent_boxes": 2.48,
+        "valid_boxes": 1054,
+        "size": {
+          "small": 114,
+          "medium": 712,
+          "large": 228
+        },
+        "median_side_px": 67.3
+      },
+      {
+        "id": 12,
+        "name": "Red Light",
+        "declared": true,
+        "status": "dropped",
+        "boxes": 771,
+        "images": 771,
+        "percent_boxes": 1.81,
+        "valid_boxes": 771,
+        "size": {
+          "small": 41,
+          "medium": 588,
+          "large": 142
+        },
+        "median_side_px": 71.2
+      },
+      {
+        "id": 13,
+        "name": "Yellow Light",
+        "declared": true,
+        "status": "dropped",
+        "boxes": 1157,
+        "images": 1157,
+        "percent_boxes": 2.72,
+        "valid_boxes": 1157,
+        "size": {
+          "small": 0,
+          "medium": 943,
+          "large": 214
+        },
+        "median_side_px": 76.6
+      },
+      {
+        "id": 14,
+        "name": "Closed road stand",
+        "declared": true,
+        "status": "dropped",
+        "boxes": 252,
+        "images": 252,
+        "percent_boxes": 0.59,
+        "valid_boxes": 252,
+        "size": {
+          "small": 86,
+          "medium": 126,
+          "large": 39
+        },
+        "median_side_px": 41.2
+      },
+      {
+        "id": 15,
+        "name": "Parking spot",
+        "declared": true,
+        "status": "dropped",
+        "boxes": 451,
+        "images": 242,
+        "percent_boxes": 1.06,
+        "valid_boxes": 451,
+        "size": {
+          "small": 3,
+          "medium": 193,
+          "large": 253
+        },
+        "median_side_px": 105.7
+      },
+      {
+        "id": 16,
+        "name": "Stop line",
+        "declared": true,
+        "status": "dropped",
+        "boxes": 1245,
+        "images": 1226,
+        "percent_boxes": 2.93,
+        "valid_boxes": 1245,
+        "size": {
+          "small": 116,
+          "medium": 547,
+          "large": 531
+        },
+        "median_side_px": 87.5
+      },
+      {
+        "id": 17,
+        "name": "class_17",
+        "declared": false,
+        "status": "dropped",
+        "boxes": 91,
+        "images": 83,
+        "percent_boxes": 0.21,
+        "valid_boxes": 91,
+        "size": {
+          "small": 1,
+          "medium": 42,
+          "large": 30
+        },
+        "median_side_px": 82.0
+      }
+    ],
+    "undeclared_classes": {
+      "17": 91
+    },
+    "size_overall": {
+      "small": 11098,
+      "medium": 20091,
+      "large": 11227
+    },
+    "size_overall_percent": {
+      "small": 26.16,
+      "medium": 47.37,
+      "large": 26.47
+    },
+    "median_side_px": 49.6
+  },
+  "density": {
+    "mean_all_images": 1.753,
+    "median_all_images": 1.0,
+    "mean_labeled_images": 2.602,
+    "median_labeled_images": 1.0,
+    "max": 13,
+    "histogram": {
+      "0": 7916,
+      "1": 10125,
+      "2": 1620,
+      "3": 621,
+      "4": 432,
+      "5": 351,
+      "6": 674,
+      "7": 942,
+      "8": 1053,
+      "9": 498,
+      ">=10": 26
+    }
+  },
+  "label_quality": {
+    "issues": {
+      "extreme_aspect": {
+        "count": 3,
+        "examples": [
+          "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/labels/train/2764_Color_jpg.rf.5366b40fa55481802b5366fe22bc5a3d.txt:1: 16 0.58046875 0.9890625 0.70078125 0.021875",
+          "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/labels/train/frame0-00-22-80_jpg.rf.3233a4e70a380364b86928cebc16efee.txt:1: 16 0.55625 0.03359375 0.128125 0.00625",
+          "Training_Yolo_Format_v3.0/Training_Yolo_Format_UPDATE/data_set_for_training/labels/train/frame0-00-22-93_jpg.rf.b058967367433332662a0bab27c1b0d3.txt:2: 16 0.59921875 0.05078125 0.1359375 0.00546875"
+        ]
+      }
+    }
+  },
+  "leakage": {
+    "method": "filename-based (source_stem / sequence_key)",
+    "total_files": 24258,
+    "unique_source_stems": 10544,
+    "duplicated_files": 13714,
+    "copies_per_stem_mean": 2.301,
+    "copies_per_stem_max": 23,
+    "copies_per_stem_histogram": {
+      "1": 5577,
+      "2": 260,
+      "3": 3775,
+      "4": 214,
+      "5": 61,
+      "6": 195,
+      "7": 117,
+      "8": 60,
+      "9": 84,
+      "10": 73,
+      "11": 19,
+      "12": 42,
+      "13": 26,
+      "14": 9,
+      "15": 14,
+      "16": 3,
+      "17": 1,
+      "18": 8,
+      "19": 2,
+      "20": 1,
+      "21": 1,
+      "22": 1,
+      "23": 1
+    },
+    "stems_in_multiple_splits": 837,
+    "files_of_leaking_stems": 5040,
+    "leaking_split_combinations": {
+      "train & valid": 419,
+      "train & test": 261,
+      "train & valid & test": 142,
+      "valid & test": 15
+    },
+    "leaking_stem_examples": [
+      "1114_Color_jpg",
+      "1115_Color_jpg",
+      "1154_Color_jpg",
+      "1157_Color_jpg",
+      "20250115_120507_jpg",
+      "20250115_120518_jpg",
+      "20250115_120519_jpg",
+      "20250115_120527_jpg",
+      "20250115_120528_jpg",
+      "20250115_120531_jpg"
+    ],
+    "sequences": 658,
+    "sequences_in_multiple_splits": 184,
+    "files_in_multi_split_sequences": 22109,
+    "sequence_key_is_coarse": true,
+    "top_sequences": [
+      {
+        "sequence": "frame_#_jpg",
+        "stems": 3064,
+        "files": 7800,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      },
+      {
+        "sequence": "frame#_jpg",
+        "stems": 1451,
+        "files": 6665,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      },
+      {
+        "sequence": "#_Color_jpg",
+        "stems": 1397,
+        "files": 1414,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      },
+      {
+        "sequence": "frame_#_png",
+        "stems": 982,
+        "files": 982,
+        "splits": [
+          "train"
+        ]
+      },
+      {
+        "sequence": "20250115_#_jpg",
+        "stems": 152,
+        "files": 885,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      },
+      {
+        "sequence": "IMG_20230302_#_HDR_jpg",
+        "stems": 98,
+        "files": 750,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      },
+      {
+        "sequence": "real_track_7_left_mp4-#_jpg",
+        "stems": 234,
+        "files": 574,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      },
+      {
+        "sequence": "real_track_5_left_mp4-#_jpg",
+        "stems": 199,
+        "files": 507,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      },
+      {
+        "sequence": "#_jpg",
+        "stems": 158,
+        "files": 474,
+        "splits": [
+          "train"
+        ]
+      },
+      {
+        "sequence": "record_2_real_track_left_mp4-#_jpg",
+        "stems": 188,
+        "files": 470,
+        "splits": [
+          "train",
+          "valid",
+          "test"
+        ]
+      }
+    ],
+    "top_families": [
+      {
+        "family": "frame_#_jpg",
+        "stems": 3064,
+        "files": 7800
+      },
+      {
+        "family": "frame#_jpg",
+        "stems": 1451,
+        "files": 6665
+      },
+      {
+        "family": "real_track_#_left_mp4-#_jpg",
+        "stems": 582,
+        "files": 1468
+      },
+      {
+        "family": "#_Color_jpg",
+        "stems": 1397,
+        "files": 1414
+      },
+      {
+        "family": "frame#-#-#-#_jpg",
+        "stems": 1258,
+        "files": 1302
+      },
+      {
+        "family": "frame_#_png",
+        "stems": 982,
+        "files": 982
+      },
+      {
+        "family": "#_#_jpg",
+        "stems": 152,
+        "files": 885
+      },
+      {
+        "family": "IMG_#_#_HDR_jpg",
+        "stems": 98,
+        "files": 750
+      },
+      {
+        "family": "yaya#_mp4-#_jpg",
+        "stems": 316,
+        "files": 588
+      },
+      {
+        "family": "#_jpg",
+        "stems": 158,
+        "files": 474
+      }
+    ],
+    "exact_duplicates": {
+      "groups": 25,
+      "files_in_groups": 50,
+      "groups_across_splits": 4,
+      "groups_across_splits_with_different_stems": 0
+    }
+  },
+  "target_view": {
+    "kept_class_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "box_rules": {
+      "clip_tolerance": 0.01,
+      "min_box_px": 2.0,
+      "max_aspect": 20.0
+    },
+    "unusable_images_excluded": 76,
+    "boxes_on_unusable_images": 113,
+    "rejected_kept_class_boxes": 0,
+    "kept_classes": [
+      {
+        "id": 0,
+        "name": "Crosswalk sign",
+        "boxes": 3793,
+        "images": 3747,
+        "percent_boxes": 11.22
+      },
+      {
+        "id": 1,
+        "name": "Highway entrance sign",
+        "boxes": 3019,
+        "images": 3000,
+        "percent_boxes": 8.93
+      },
+      {
+        "id": 2,
+        "name": "Highway exit sign",
+        "boxes": 3504,
+        "images": 3498,
+        "percent_boxes": 10.37
+      },
+      {
+        "id": 3,
+        "name": "No-entry road sign",
+        "boxes": 3642,
+        "images": 3624,
+        "percent_boxes": 10.78
+      },
+      {
+        "id": 4,
+        "name": "One-way road sign",
+        "boxes": 3237,
+        "images": 3188,
+        "percent_boxes": 9.58
+      },
+      {
+        "id": 5,
+        "name": "Parking sign",
+        "boxes": 3281,
+        "images": 3261,
+        "percent_boxes": 9.71
+      },
+      {
+        "id": 6,
+        "name": "Priority sign",
+        "boxes": 2833,
+        "images": 2831,
+        "percent_boxes": 8.38
+      },
+      {
+        "id": 7,
+        "name": "Roundabout sign",
+        "boxes": 3540,
+        "images": 3494,
+        "percent_boxes": 10.47
+      },
+      {
+        "id": 8,
+        "name": "Stop sign",
+        "boxes": 3526,
+        "images": 3498,
+        "percent_boxes": 10.43
+      },
+      {
+        "id": 9,
+        "name": "Pedestrian",
+        "boxes": 3422,
+        "images": 3421,
+        "percent_boxes": 10.13
+      }
+    ],
+    "kept_boxes_total": 33797,
+    "dropped_boxes_total": 8619,
+    "dropped_boxes_by_class": {
+      "10 Car": 3670,
+      "11 Green Light": 1054,
+      "12 Red Light": 771,
+      "13 Yellow Light": 1157,
+      "14 Closed road stand": 251,
+      "15 Parking spot": 449,
+      "16 Stop line": 1194,
+      "17 class_17": 73
+    },
+    "imbalance_ratio_max_min": 1.339,
+    "positive_images": 11786,
+    "positive_images_per_split": {
+      "train": 10157,
+      "valid": 772,
+      "test": 857
+    },
+    "mean_kept_boxes_per_positive_image": 2.868,
+    "background_images_after_filter": 12396,
+    "background_reasons": {
+      "no_label_file": 7910,
+      "only_dropped_classes": 4480,
+      "empty_label_file": 6
+    },
+    "background_kept_if_10_percent": 1240,
+    "ambiguous_images_excluded": 0
+  },
+  "plots": {
+    "renderer": "matplotlib",
+    "files": [
+      "class_distribution.png",
+      "resolution_distribution.png",
+      "boxes_per_image.png",
+      "bbox_size_distribution.png",
+      "copies_per_stem.png"
+    ]
+  }
+}
