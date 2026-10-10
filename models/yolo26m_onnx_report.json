@@ -1,0 +1,316 @@
+{
+  "weights": "runs/detect/yolo26m_baseline-2/weights/best_fp32.pt",
+  "imgsz": 640,
+  "opset": 17,
+  "simplifier": "onnxsim v0.7.3",
+  "nms": false,
+  "dynamic": false,
+  "batch": 1,
+  "full_onnx": {
+    "path": "/home/bkauto/bkauto-yolo26-vision/models/yolo26m.onnx",
+    "size_MB": 77.87,
+    "sha256": "67e1de8d6a6b3c795ccd34c0e048eca0358f27b396f366f567f4ab12a95af334",
+    "inputs": [
+      {
+        "name": "images",
+        "dtype": "float32",
+        "shape": [
+          1,
+          3,
+          640,
+          640
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "output0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          300,
+          6
+        ]
+      }
+    ]
+  },
+  "npu_onnx": {
+    "path": "/home/bkauto/bkauto-yolo26-vision/models/yolo26m_npu.onnx",
+    "size_MB": 77.76,
+    "sha256": "f85ce023a95284f6d196f785310e091c6f2545a96c8397a652dfb681148316b4",
+    "inputs": [
+      {
+        "name": "images",
+        "dtype": "float32",
+        "shape": [
+          1,
+          3,
+          640,
+          640
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "/model.23/one2one_cv2.0/one2one_cv2.0.2/Conv_output_0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          4,
+          80,
+          80
+        ]
+      },
+      {
+        "name": "/model.23/one2one_cv3.0/one2one_cv3.0.2/Conv_output_0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          10,
+          80,
+          80
+        ]
+      },
+      {
+        "name": "/model.23/one2one_cv2.1/one2one_cv2.1.2/Conv_output_0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          4,
+          40,
+          40
+        ]
+      },
+      {
+        "name": "/model.23/one2one_cv3.1/one2one_cv3.1.2/Conv_output_0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          10,
+          40,
+          40
+        ]
+      },
+      {
+        "name": "/model.23/one2one_cv2.2/one2one_cv2.2.2/Conv_output_0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          4,
+          20,
+          20
+        ]
+      },
+      {
+        "name": "/model.23/one2one_cv3.2/one2one_cv3.2.2/Conv_output_0",
+        "dtype": "float32",
+        "shape": [
+          1,
+          10,
+          20,
+          20
+        ]
+      }
+    ]
+  },
+  "hailo_end_node_names": [
+    "/model.23/one2one_cv2.0/one2one_cv2.0.2/Conv",
+    "/model.23/one2one_cv3.0/one2one_cv3.0.2/Conv",
+    "/model.23/one2one_cv2.1/one2one_cv2.1.2/Conv",
+    "/model.23/one2one_cv3.1/one2one_cv3.1.2/Conv",
+    "/model.23/one2one_cv2.2/one2one_cv2.2.2/Conv",
+    "/model.23/one2one_cv3.2/one2one_cv3.2.2/Conv"
+  ],
+  "end_nodes": [
+    {
+      "node": "/model.23/one2one_cv2.0/one2one_cv2.0.2/Conv",
+      "tensor": "/model.23/one2one_cv2.0/one2one_cv2.0.2/Conv_output_0",
+      "kind": "box_ltrb",
+      "scale": 0,
+      "shape": [
+        1,
+        4,
+        80,
+        80
+      ],
+      "stride": 8
+    },
+    {
+      "node": "/model.23/one2one_cv3.0/one2one_cv3.0.2/Conv",
+      "tensor": "/model.23/one2one_cv3.0/one2one_cv3.0.2/Conv_output_0",
+      "kind": "cls_logits",
+      "scale": 0,
+      "shape": [
+        1,
+        10,
+        80,
+        80
+      ],
+      "stride": 8
+    },
+    {
+      "node": "/model.23/one2one_cv2.1/one2one_cv2.1.2/Conv",
+      "tensor": "/model.23/one2one_cv2.1/one2one_cv2.1.2/Conv_output_0",
+      "kind": "box_ltrb",
+      "scale": 1,
+      "shape": [
+        1,
+        4,
+        40,
+        40
+      ],
+      "stride": 16
+    },
+    {
+      "node": "/model.23/one2one_cv3.1/one2one_cv3.1.2/Conv",
+      "tensor": "/model.23/one2one_cv3.1/one2one_cv3.1.2/Conv_output_0",
+      "kind": "cls_logits",
+      "scale": 1,
+      "shape": [
+        1,
+        10,
+        40,
+        40
+      ],
+      "stride": 16
+    },
+    {
+      "node": "/model.23/one2one_cv2.2/one2one_cv2.2.2/Conv",
+      "tensor": "/model.23/one2one_cv2.2/one2one_cv2.2.2/Conv_output_0",
+      "kind": "box_ltrb",
+      "scale": 2,
+      "shape": [
+        1,
+        4,
+        20,
+        20
+      ],
+      "stride": 32
+    },
+    {
+      "node": "/model.23/one2one_cv3.2/one2one_cv3.2.2/Conv",
+      "tensor": "/model.23/one2one_cv3.2/one2one_cv3.2.2/Conv_output_0",
+      "kind": "cls_logits",
+      "scale": 2,
+      "shape": [
+        1,
+        10,
+        20,
+        20
+      ],
+      "stride": 32
+    }
+  ],
+  "graph_analysis": {
+    "num_nodes": 418,
+    "op_histogram": {
+      "Conv": 112,
+      "Mul": 100,
+      "Sigmoid": 98,
+      "Concat": 26,
+      "Add": 23,
+      "Split": 12,
+      "Reshape": 12,
+      "Transpose": 5,
+      "MatMul": 4,
+      "Unsqueeze": 4,
+      "MaxPool": 3,
+      "GatherElements": 3,
+      "Softmax": 2,
+      "Resize": 2,
+      "Slice": 2,
+      "TopK": 2,
+      "Expand": 2,
+      "Sub": 1,
+      "ReduceMax": 1,
+      "Flatten": 1,
+      "Mod": 1,
+      "Cast": 1,
+      "Div": 1
+    },
+    "npu_unfriendly_ops_total": {
+      "ReduceMax": 1,
+      "TopK": 2,
+      "Expand": 2,
+      "GatherElements": 3,
+      "Mod": 1,
+      "Cast": 1
+    },
+    "cpu_tail_nodes": 35,
+    "cpu_tail_op_histogram": {
+      "Reshape": 6,
+      "Concat": 5,
+      "Unsqueeze": 4,
+      "GatherElements": 3,
+      "Slice": 2,
+      "TopK": 2,
+      "Expand": 2,
+      "Sub": 1,
+      "Add": 1,
+      "Mul": 1,
+      "Sigmoid": 1,
+      "Transpose": 1,
+      "Split": 1,
+      "ReduceMax": 1,
+      "Flatten": 1,
+      "Mod": 1,
+      "Cast": 1,
+      "Div": 1
+    },
+    "npu_unfriendly_ops_in_tail": {
+      "ReduceMax": 1,
+      "TopK": 2,
+      "Expand": 2,
+      "GatherElements": 3,
+      "Mod": 1,
+      "Cast": 1
+    },
+    "npu_unfriendly_ops_before_cut": {}
+  },
+  "cpu_postprocess": {
+    "anchors": "(j + 0.5, i + 0.5) trên lưới H x W của từng stride",
+    "box": "x1=(cx-l)*s, y1=(cy-t)*s, x2=(cx+r)*s, y2=(cy+b)*s (reg_max=1, không DFL)",
+    "score": "sigmoid(cls_logits)",
+    "select": "top max_det cặp (anchor, class) theo score; KHÔNG cần NMS",
+    "input_preprocess": "letterbox 114, RGB, /255 (gộp vào NPU qua normalization)"
+  },
+  "verification": {
+    "test_images": [
+      "1431_Color_jpg.rf.9ebd5a4b6a70b6f316d4900eddd25c46.jpg",
+      "2788_Color_jpg.rf.4116ad7d0d9b3d9cef39e334bafc977e.jpg",
+      "IMG_20230302_131439800_HDR_jpg.rf.f9c55ceda5ec507c6bf11b139ed70e17.jpg",
+      "IMG_20230302_131518342_HDR_jpg.rf.7bba2e1fdcdc6e18030dfcab0c1d16b7.jpg",
+      "IMG_20230302_131712940_jpg.rf.f37d02bd1c74d0736fb51fa45c9176ac.jpg",
+      "frame0-00-04-50_jpg.rf.17fe6796f4832bc3cc1e274fdd136215.jpg",
+      "frame0-08-17-10_jpg.rf.2fca4051a8303e05630ffaa8a88c9d2f.jpg",
+      "frame1267_jpg.rf.acd03c22edf60987502949090514bce7.jpg",
+      "frame317_jpg.rf.7d30bf5bddd14363f537244f23c9d038.jpg",
+      "frame_0416_png.rf.8611285654ddca6681ca341ab4e1e5ea.jpg",
+      "frame_1070_jpg.rf.7bff318480c8e7b1d59dd09c980d46d1.jpg",
+      "frame_1772_jpg.rf.5c62c9b5ccfce76745fd73dce0f8b693.jpg",
+      "frame_2565_jpg.rf.8079abf3e37adfa93d9e63382f03a2c8.jpg",
+      "frame_3099_jpg.rf.534142c9d1c9bae40a12d7da2bc739f9.jpg",
+      "image_20251219_100951_1011.jpg",
+      "yaya9_mp4-0026_jpg.rf.f9c9af90023014a6655110c79ef7bf66.jpg"
+    ],
+    "torch_vs_onnx": {
+      "images": 16,
+      "conf_threshold": 0.25,
+      "detections_compared": 35,
+      "max_abs_box_diff_px": 6.103515625e-05,
+      "max_abs_score_diff": 2.086162567138672e-06,
+      "passed": true,
+      "failed_images": []
+    },
+    "onnx_vs_npu_subgraph_plus_cpu_decode": {
+      "images": 16,
+      "conf_threshold": 0.25,
+      "detections_compared": 35,
+      "max_abs_box_diff_px": 2.6702880859375e-05,
+      "max_abs_score_diff": 5.960464477539063e-08,
+      "passed": true,
+      "failed_images": []
+    }
+  },
+  "weights_size_MB": 83.77
+}

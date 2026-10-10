@@ -1,0 +1,16 @@
+path: /home/bkauto/bkauto-yolo26-vision/data/processed
+train: Train/images
+val: Val/images
+test: Test/images
+nc: 10
+names:
+  0: Crosswalk sign
+  1: Highway entrance sign
+  2: Highway exit sign
+  3: No-entry road sign
+  4: One-way road sign
+  5: Parking sign
+  6: Priority sign
+  7: Roundabout sign
+  8: Stop sign
+  9: Pedestrian

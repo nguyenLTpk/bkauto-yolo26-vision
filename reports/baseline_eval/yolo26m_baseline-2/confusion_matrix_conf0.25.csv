@@ -1,0 +1,12 @@
+predicted \ true,Crosswalk sign,Highway entrance sign,Highway exit sign,No-entry road sign,One-way road sign,Parking sign,Priority sign,Roundabout sign,Stop sign,Pedestrian,background
+Crosswalk sign,360,1,2,0,1,2,0,0,0,0,10
+Highway entrance sign,0,289,2,0,0,0,0,0,0,0,18
+Highway exit sign,0,0,321,0,0,0,0,0,0,0,30
+No-entry road sign,0,0,0,350,0,0,0,0,3,0,12
+One-way road sign,0,0,0,0,305,1,0,4,0,0,7
+Parking sign,0,0,0,0,0,301,0,0,0,0,30
+Priority sign,0,0,0,0,0,0,271,0,0,0,13
+Roundabout sign,0,1,2,0,0,3,0,334,0,0,20
+Stop sign,2,0,0,0,0,0,0,0,340,0,11
+Pedestrian,0,0,0,0,0,0,0,0,0,333,22
+background,6,2,9,1,10,10,2,3,3,4,0
